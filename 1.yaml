@@ -1,0 +1,19 @@
+apiVersion: v1
+imagePullSecrets:
+  - name: registry-credentials
+kind: ServiceAccount
+metadata:
+  annotations:
+    kapp.k14s.io/identity: v1;development//ServiceAccount/workload-sa;v1
+    kapp.k14s.io/original: '{"apiVersion":"v1","imagePullSecrets":[{"name":"registry-credentials"}],"kind":"ServiceAccount","metadata":{"labels":{"kapp.k14s.io/app":"1674752083212637829","kapp.k14s.io/association":"v1.98b384647ea350a600d27e64399ce73e"},"name":"workload-sa","namespace":"development"},"secrets":[{"name":"registry-credentials"},{"name":"cosign"},{"name":"git-secret"}]}'
+    kapp.k14s.io/original-diff-md5: 58e0494c51d30eb3494f7c9198986bb9
+  labels:
+    kapp.k14s.io/app: "1674752083212637829"
+    kapp.k14s.io/association: v1.98b384647ea350a600d27e64399ce73e
+  name: workload-sa
+  namespace: development
+secrets:
+  - name: registry-credentials
+  - name: cosign
+  - name: git-secret
+  - name: workload-sa-token-4rzts

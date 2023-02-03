@@ -1,0 +1,20 @@
+apiVersion: v1
+imagePullSecrets:
+  - name: registries-credentials
+kind: ServiceAccount
+metadata:
+  annotations:
+    doc: This resources has been created for you as part of the necessary resources for running your cluster supply chain. You are free to make changes to suit your needs. If you need to revert your changes, deleting this resource will cause it to be re-created in a default state.
+    kapp.k14s.io/create-strategy: fallback-on-update
+    kapp.k14s.io/identity: v1;development//ServiceAccount/default;v1
+    kapp.k14s.io/original: '{"apiVersion":"v1","imagePullSecrets":[{"name":"registries-credentials"}],"kind":"ServiceAccount","metadata":{"annotations":{"doc":"This resources has been created for you as part of the necessary resources for running your cluster supply chain. You are free to make changes to suit your needs. If you need to revert your changes, deleting this resource will cause it to be re-created in a default state.","kapp.k14s.io/create-strategy":"fallback-on-update","namespace-provisioner.apps.tanzu.vmware.com/no-overwrite":""},"labels":{"kapp.k14s.io/app":"1674752083212637829","kapp.k14s.io/association":"v1.1bd1f581fe6fffde214e077fb1d29a82"},"name":"default","namespace":"development"},"secrets":[{"name":"registries-credentials"}]}'
+    kapp.k14s.io/original-diff-md5: 58e0494c51d30eb3494f7c9198986bb9
+    namespace-provisioner.apps.tanzu.vmware.com/no-overwrite: ""
+  labels:
+    kapp.k14s.io/app: "1674752083212637829"
+    kapp.k14s.io/association: v1.1bd1f581fe6fffde214e077fb1d29a82
+  name: default
+  namespace: development
+secrets:
+  - name: default-token-7xh49
+  - name: registries-credentials
