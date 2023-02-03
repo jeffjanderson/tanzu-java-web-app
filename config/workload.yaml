@@ -8,10 +8,16 @@ metadata:
     app.kubernetes.io/part-of: tanzu-java-web-app
     apps.tanzu.vmware.com/has-tests: "true"
 spec:
+  serviceAccount: workload-sa
+  serviceAccountName: workload-sa
   params:
   - name: annotations
     value:
       autoscaling.knative.dev/minScale: "1"
+  - name: serviceAccount
+    value: workload-sa
+  - name: serviceAccountName
+    value: workload-sa
   - name: gitops_server_address
     value: https://github.com/
   - name: gitops_repository_owner
